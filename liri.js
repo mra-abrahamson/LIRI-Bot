@@ -2,9 +2,8 @@
 	var fs = require("fs"); //reads and writes files
 	var request = require("request");
 	var keys = require("./keys.js");
-	// var twitter = require("twitter");
-	var spotify = require ("spotify");
 	var axios = require("axios");
+	var spotify = require("node-spotify-api");
 	var liriArgument = process.argv[2];
 
 
@@ -97,33 +96,55 @@
 	};
 
 	// Spotify function, uses the Spotify module to call the Spotify api
-	function spotifyThisSong(songName) {
-		var songName = process.argv[3];
+
+
+	var spotify = new Spotify({
+		id: <your spotify client id>,
+		secret: <your spotify client secret>
+	  });
+	   
+	  var songName = process.argv[3];
 		if(!songName){
 			songName = "What's my age again";
 		}
 		params = songName;
-		spotify.search({ type: "track", query: params }, function(err, data) {
-			if(!err){
-				var songInfo = data.tracks.items;
-				for (var i = 0; i < 5; i++) {
-					if (songInfo[i] != undefined) {
-						var spotifyResults =
-						"Artist: " + songInfo[i].artists[0].name + "\r\n" +
-						"Song: " + songInfo[i].name + "\r\n" +
-						"Album the song is from: " + songInfo[i].album.name + "\r\n" +
-						"Preview Url: " + songInfo[i].preview_url + "\r\n" + 
-						"------------------------------ " + i + " ------------------------------" + "\r\n";
-						console.log(spotifyResults);
-						log(spotifyResults); // calling log function
-					}
-				}
-			}	else {
-				console.log("Error :"+ err);
-				return;
-			}
-		});
-	};
+
+	  spotify.search({ type: 'track', query: 'params' }, function(err, data) {
+		if (err) {
+		  return console.log('Error occurred: ' + err);
+		}
+	   
+	  console.log(data); 
+	  });
+
+
+	// function spotifyThisSong(songName) {
+		// var songName = process.argv[3];
+		// if(!songName){
+		// 	songName = "What's my age again";
+		// }
+		// params = songName;
+	// 	spotify.search({ type: "track", query: params }, function(err, data) {
+	// 		if(!err){
+	// 			var songInfo = data.tracks.items;
+	// 			for (var i = 0; i < 5; i++) {
+	// 				if (songInfo[i] != undefined) {
+	// 					var spotifyResults =
+	// 					"Artist: " + songInfo[i].artists[0].name + "\r\n" +
+	// 					"Song: " + songInfo[i].name + "\r\n" +
+	// 					"Album the song is from: " + songInfo[i].album.name + "\r\n" +
+	// 					"Preview Url: " + songInfo[i].preview_url + "\r\n" + 
+	// 					"------------------------------ " + i + " ------------------------------" + "\r\n";
+	// 					console.log(spotifyResults);
+	// 					log(spotifyResults); // calling log function
+	// 				}
+	// 			}
+	// 		}	else {
+	// 			console.log("Error :"+ err);
+	// 			return;
+	// 		}
+	// 	});
+	// };
 
 	// Do What It Says function, uses the reads and writes module to access the random.txt file and do what's written in it
 	function doWhatItSays() {
