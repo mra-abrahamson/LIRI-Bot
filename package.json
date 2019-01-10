@@ -1,6 +1,6 @@
 {
   "name": "liri-node-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Week 6 Homework 1",
   "main": "index.js",
   "dependencies": {
