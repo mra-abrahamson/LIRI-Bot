@@ -74,4 +74,4 @@ example command-
 
 In this case it will pull up the spotify API and look up "I want it that way" from the Backstreet Boys.
 
-![Example of 'do-what-it-says' output](../screenshots/do-what-it-says.png?raw=true "'do-what-it-says' output")
+![Example of 'do-what-it-says' output](liri-node-app/screenshots/do-what-it-says.PNG "'do-what-it-says' output")
