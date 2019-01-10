@@ -47,7 +47,7 @@ example command-
 
 ![Example of 'do-what-it-says' output](/screenshots/bands-in-town.PNG)
 
-###Get Song Info
+### Get Song Info
 
 Retrieves song information for a track:
 
@@ -56,7 +56,7 @@ example command-
 
 ![Example of 'do-what-it-says' output](/screenshots/spotify-this-song.PNG)
 
-###Get Movie Info
+### Get Movie Info
 
 Retrieves movie information for a movie:
 
@@ -65,7 +65,7 @@ example command-
 
 ![Example of 'do-what-it-says' output](/screenshots/movie-this.PNG)
 
-###Get Random Info
+### Get Random Info
 
 Gets random text inside a file and does what it says:
 
@@ -77,4 +77,4 @@ In this case it will pull up the spotify API and look up "I want it that way" fr
 ![Example of 'do-what-it-says' output](/screenshots/do-what-it-says.PNG)
 
 
-created by  #Matthew Abrahamson  2018 
+created by  # Matthew Abrahamson  2018 
