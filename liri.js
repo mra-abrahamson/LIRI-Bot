@@ -31,7 +31,7 @@ switch(liriArgument) {
 
   // Instructions displayed in terminal to the user
   default: console.log("\r\n" +"Try typing one of the following commands after 'node liri.js' : " +"\r\n"+
-    "1. concert-this 'any song name' "+"\r\n"+  
+    "1. concert-this 'any band name' "+"\r\n"+  
     "2. spotify-this-song 'any song name' "+"\r\n"+
     "3. movie-this 'any movie name' "+"\r\n"+
     "4. do-what-it-says"+"\r\n"+
