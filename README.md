@@ -36,7 +36,7 @@ Here's a quick rundom of the commands you can use in LIRI.
     3. movie-this 'any movie name'
     4. do-what-it-says
 
-    ![Alt text](relative/path/to/img.jpg?raw=true "Title")
+![Example of the menu output](/screenshots/liri-main-menu.PNG)
 
 ### Get Concert Info
 
@@ -45,7 +45,7 @@ Retrieves concert info for bands:
 example command-
 `nnode liri.js concert-this "Aerosmith"`
 
-![Alt text](relative/path/to/img.jpg?raw=true "Title")
+![Example of 'do-what-it-says' output](/screenshots/bands-in-town.PNG)
 
 ###Get Song Info
 
@@ -54,7 +54,7 @@ Retrieves song information for a track:
 example command-
 `node liri.js spotify-this-song "The Sign"`
 
-![Alt text](relative/path/to/img.jpg?raw=true "Title")
+![Example of 'do-what-it-says' output](/screenshots/spotify-this-song.PNG)
 
 ###Get Movie Info
 
@@ -63,7 +63,7 @@ Retrieves movie information for a movie:
 example command-
 `node liri.js movie-this "Mr. Nobody"`
 
-![Alt text](relative/path/to/img.jpg?raw=true "Title")
+![Example of 'do-what-it-says' output](/screenshots/movie-this.PNG)
 
 ###Get Random Info
 
@@ -75,3 +75,6 @@ example command-
 In this case it will pull up the spotify API and look up "I want it that way" from the Backstreet Boys.
 
 ![Example of 'do-what-it-says' output](/screenshots/do-what-it-says.PNG)
+
+
+created by  #Matthew Abrahamson  2018 
