@@ -21,6 +21,24 @@ var fs = require("fs");
 // Initialize the spotify API client using our client id and secret
 var spotify = new Spotify(keys.spotify);
 
+// MENU
+// =====================================
+
+var liriArgument = process.argv[2];
+
+// Possible commands for this liri app
+switch(liriArgument) {
+
+  // Instructions displayed in terminal to the user
+  default: console.log("\r\n" +"Try typing one of the following commands after 'node liri.js' : " +"\r\n"+
+    "1. concert-this 'any song name' "+"\r\n"+  
+    "2. spotify-this-song 'any song name' "+"\r\n"+
+    "3. movie-this 'any movie name' "+"\r\n"+
+    "4. do-what-it-says"+"\r\n"+
+    "Be sure to put the movie or song name in quotation marks if it's more than one word."+"\r\n"+
+    "===============================================================================");
+};
+
 // FUNCTIONS
 // =====================================
 
@@ -151,7 +169,7 @@ var pick = function(caseData, functionData) {
     doWhatItSays();
     break;
   default:
-    console.log("LIRI doesn't know that");
+    console.log("DONE!");
   }
 };
 

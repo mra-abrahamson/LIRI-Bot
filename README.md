@@ -3,56 +3,75 @@
 ### Week 6 Homework 1
 
 
-### liri-node-app
 
-LIRI is a Language Interpretation and Recognition Interface. Use LIRI to get concert information,find out about a song, or a movie, or just choose a random action from your own random file.
+Create a LIRI bot, like iPhone's SIRI, but takes in command through Language vs Speech. LIRI is a command line node app that takes in parameters and returns data based on one of four commands:
 
-### Installs
+  * `concert-this`
 
-The [package.json](https://github.com/mra-abrahamson/liri-node-app/blob/master/package.json) lists dependent node packages, but for your convenvice, these are the ones to install.
+  * `spotify-this-song`
 
-### Bands in Town Artist Events API & OMDB API 
+  * `movie-this`
 
-`npm install axios`
+  * `do-what-it-says`
 
-### Spotify
+## Getting Started
 
-Note: you will not find my spotify API keys in this repository.  you must use your own API Key and Secret key from Spotify to make this particular functionality to work. Add your keys to the `keys.js` file.
+- Clone down repo.
+- Run command 'npm install' (or npm i) in Terminal or GitBash
+- Run command 'node liri.js' or one of the commands below.
 
-`npm i node-spotify-api`
+## What Each Command Does
 
-### Moment
+1. `node liri.js concert-this <band name>`
 
-`npm i moment`
+  * Displays a bands tour dates and \cities.
 
-### DotEnv
+2. `node liri.js spotify-this-song <song name>`
 
-`npm i dotenv`
+  * Shows the following information about the song in terminal/bash window.
+    * Artist(s)
+    * The song's name
+    * A preview link of the song from Spotify
+    * The album that the song is from
 
-### Get Started
+  * Or if no song is passed through, it will default to
+    *"I want it that way" by the Backstreat Boys.
 
-Here's a quick rundom of the commands you can use in LIRI.
+3. `node liri.js movie-this <movie name>`
 
-### Get Concert Info
+  * Shows the following information in terminal/bash.
 
-Retrieves concert info for bands:
+    * Title of the movie.
+    * Year the movie came out.
+    * IMDB Rating of the movie.
+    * Country where the movie was produced.
+    * Language of the movie.
+    * Plot of the movie.
+    * Actors in the movie.
+    * Rotten Tomatoes Rating.
+    * Rotten Tomatoes URL.
 
-`nnode liri.js concert-this "Aerosmith"`
+  * Or if no movie is passed through, it will default to "Mr. Nobody"
 
-###Get Song Info
+4. `node liri.js do-what-it-says`
 
-Retrieves song information for a track:
+  * Takes the text from random.txt and runs the song through spotify-this-song command
 
-`node liri.js spotify-this-song "The Sign"`
+## Tech used
+- Node.js
+- Twitter NPM Package - https://www.npmjs.com/package/twitter
+- Spotify NPM Package - https://www.npmjs.com/package/spotify
+- Request NPM Package - https://www.npmjs.com/package/request
 
-###Get Movie Info
+## Prerequisites
+```
+- Node.js - Download the latest version of Node https://nodejs.org/en/
+```
 
-Retrieves movie information for a movie:
+## Built With
 
-`node liri.js movie-this "Mr. Nobody"`
+* Sublime Text - Text Editor
 
-###Get Random Info
+## Authors
 
-Gets random text inside a file and does what it says:
-
-`node liri.js do-what-it-says`
+* **Stefanie Ding** - *Node JS* - [Stefanie Ding](https://github.com/StefanieDing)
